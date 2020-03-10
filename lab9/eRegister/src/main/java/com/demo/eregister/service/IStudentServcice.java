@@ -12,4 +12,8 @@ public interface IStudentServcice {
     void deleteStudent(Long studentId);
 
     List<Student> filterStudents(String search);
+
+    Student getStudentById(long studentId);
+
+    Student saveStudent(Student student);
 }

@@ -42,4 +42,13 @@ public class StudentService implements IStudentServcice {
 
        return students;
     }
+
+    @Override
+    public Student getStudentById(long studentId) {
+        return this.studentRepository.getOne(studentId);
+    }
+
+    @Override
+    public Student saveStudent(Student student) {
+        return this.studentRepository.save(student);    }
 }

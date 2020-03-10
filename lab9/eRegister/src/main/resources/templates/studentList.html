@@ -15,13 +15,13 @@
     <nav class="navbar navbar-expand-lg navbar ">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link " href="#">Home</a>
+                <a class="nav-link " href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/students">Students</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Add</a>
+                <a class="nav-link" href="/register">Add</a>
             </li>
 
         </ul>
@@ -37,11 +37,11 @@
 
 
 
-        <form id="searchBookForm" method="get" action="/search">
+        <form id="searchStudentForm" method="get" action="/search">
             <div style="margin-top:1em;" class="row">
                 <div class="col-md-12">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="searchString" name="searchString" placeholder="Enter a string to search for books" th:value="${searchString}" autofocus />
+                        <input type="text" class="form-control" id="searchString" name="searchString" placeholder="Enter a string to search for a Student" th:value="${searchString}" autofocus />
                         <div class="input-group-append">
                             <button id="btnSubmit" type="submit" class="btn btn-outline-success">Search</button>
                         </div>
@@ -78,7 +78,7 @@
                     <td th:text="${student.cgpa}"></td>
                     <td th:text="${student.enrollmentDate}"></td>
                     <td th:text="${student.isInternational}"></td>
-                    <td><a th:href="@{'/edit/{bookId}'(bookId=${student.studentId})}">Edit</a></td>
+                    <td><a th:href="@{'/edit/{studentId}'(studentId=${student.studentId})}">Edit</a></td>
                     <td>
                         <a th:href="@{'../delete/' + ${student.studentId}}">Delete</a>
 
@@ -88,7 +88,12 @@
             </table>
         </div>
     </div>
-
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">O. Jablaoui : : : CS425-SWE</span>
+            <span style="float:right;" class="text-muted">&copy; March 2019</span>
+        </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
