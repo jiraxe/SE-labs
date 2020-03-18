@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+            <form action="#" th:action="@{/register}" th:object="${student}" method="post">
+
+            <fieldset>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="studentNumber">Student Number</label>
+                            <input id="studentNumber" name="studentNumber" type="text" class="form-control"
+                                   th:field="*{studentNumber}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="FirstName">First Name</label>
+                            <input id="FirstName" name="FirstName" type="text" class="form-control"
+                                   th:field="*{firstName}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="MiddleName">Middle Name</label>
+                            <input id="MiddleName" name="MiddleName" type="text" class="form-control"
+                                   th:field="*{middleName}">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="LastName">Last Name</label>
+                            <input id="LastName" name="LastName" type="text" class="form-control"
+                                   th:field="*{lastName}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="cgpa">Cummulative GPA</label>
+                            <input id="cgpa" name="cgpa" type="text" class="form-control"
+                                   th:field="*{cgpa}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="enrollmentDate">Enrollment Date</label>
+                            <input id="enrollmentDate" name="enrollmentDate" type="date" class="form-control"
+                                   th:field="*{enrollmentDate}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="isInternational">International ?</label>
+                            <select id="isInternational"  th:field="*{isInternational}">
+
+
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <div style="float:right;">
+                    <a href="/" class="btn btn-outline-warning">Cancel</a>&nbsp;&nbsp;&nbsp;
+                    <button id="btnSubmit" type="submit" class="btn btn-outline-success">Save Book</button>
+                </div>
+            </fieldset>
+        </form>
+
+
+    </body>
+</html>
