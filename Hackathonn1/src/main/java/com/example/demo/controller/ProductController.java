@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value="/product")
 public class ProductController {
 
@@ -23,6 +23,10 @@ public class ProductController {
     @Autowired
     ISupplierService iSupplierService;
 
+    @GetMapping(value = {"/x"})
+    public List<Product> listProduct() {
+        return this.iProductService.getAllProducts();
+    }
     @GetMapping(value="")
     ModelAndView getAllProducts()
     {

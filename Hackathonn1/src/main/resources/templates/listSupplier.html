@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{navbar}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +14,7 @@
 
 </head>
 <body>
-<div w3-include-html="navbar.html"></div>
-
+<th:block th:include="navbar :: assets"></th:block>
 
     <div style="padding-top:1em;" class="container">
         <div>

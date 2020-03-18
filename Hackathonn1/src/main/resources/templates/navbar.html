@@ -1,18 +1,22 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <html lang="en">
+<th:block th:fragment="assets">
+    <nav class="navbar navbar-expand-lg navbar ">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link " href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/product">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/supplier">Suppliers</a>
+            </li>
 
-<nav class="navbar navbar-expand-lg navbar ">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link " href="/">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/product">Products</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/supplier">Suppliers</a>
-        </li>
+        </ul>
+    </nav>
+</th:block>
 
-    </ul>
-</nav>
 </html>
